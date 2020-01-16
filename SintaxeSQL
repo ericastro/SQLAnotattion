@@ -1,0 +1,31 @@
+CREATE DATABASE CRUD;
+
+CREATE TABLE Usuarios (
+    usuariosID int PRIMARY KEY AUTO_INCREMENT,
+    FirstName varchar(255),
+    LastName varchar(255),
+    Password bigint
+);
+
+INSERT INTO nome_tabela (lista-de-campos)
+VALUES (lista_dados)
+ 
+--OU
+ 
+INSERT INTO nome_tabela  VALUES (lista_dados)
+ 
+UPDATE nome_tabela SET CAMPO = "novo_valor" WHERE CONDIÇÃO
+ 
+DELETE FROM nome_tabela WHERE condição
+ 
+SELECT id, firstname, lastname FROM MyGuests
+
+create view view_join_tableA_tableB as
+select 	A."capsula_id", 
+		A."descricao",
+		A."forca",
+		B."data_entrada",
+		B."data_saida"
+from TableA."capsulas" as A
+inner join TableB."estoque" as B
+ON A."capsula_id" = B."capsula_id";    
